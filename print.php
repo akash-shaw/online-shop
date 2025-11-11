@@ -71,7 +71,7 @@ if($count>0)
   <tr><td><b>Address : '.$fetch_orders['address'].' </b></td><td align="right"></td></tr>
   <tr><td><b>Payment method : '.$fetch_orders['method'].' </b></td><td align="right"></td></tr>
   <tr><td><b>your orders : '.$fetch_orders['total_products'].' </b></td><td align="right"></td></tr>
-  <tr><td><b>total : '.$fetch_orders['total_price'].' tk </b></td><td align="right"></td></tr>
+	<tr><td><b>total : '.((getenv('CURRENCY_PREFIX')?:'Rs').' '.$fetch_orders['total_price'].'/-').'</b></td><td align="right"></td></tr>
 
 
 

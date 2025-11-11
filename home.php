@@ -52,8 +52,8 @@ if(isset($_POST['add_to_cart'])){
 <section class="home">
 
    <div class="content">
-      <h3>সেরা লেখকদের সেরা <br> বই  কম সময়ে  ,<br>কম মূল্যে    </h3>
-      <p>ঘরে বসেই কিনুন বইমেলার আসল বই.........</p>
+      <h3>Fresh merch from your favorite brands</h3>
+      <p>Shop apparel, accessories, and collectibles — fast, simple, delivered.</p>
       <a href="about.php" class="white-btn">discover more</a>
    </div>
 
@@ -73,7 +73,7 @@ if(isset($_POST['add_to_cart'])){
      <form action="" method="post" class="box">
       <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
       <div class="name"><?php echo $fetch_products['name']; ?></div>
-      <div class="price">৳<?php echo $fetch_products['price']; ?>/-</div>
+   <div class="price"><?php echo (isset($CURRENCY_PREFIX)?$CURRENCY_PREFIX:(getenv('CURRENCY_PREFIX')?:'Rs')); ?><?php echo ' '.$fetch_products['price'].'/-'; ?></div>
       <input type="number" min="1" name="product_quantity" value="1" class="qty">
       <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
       <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
@@ -99,12 +99,12 @@ if(isset($_POST['add_to_cart'])){
    <div class="flex">
 
       <div class="image">
-         <img src="images/about-img.jpg" alt="">
+         <img src="image/about-img-new.webp" alt="">
       </div>
 
       <div class="content">
          <h3>about us</h3>
-         <p>বইমেলা is one of the leading publications in Bangladesh, guided by three principles: customer satisfaction rather than competitor focus, passion for intellectuality, and commitment to high-quality products.</p>
+         <p><?php echo isset($STORE_NAME) ? $STORE_NAME : (getenv('STORE_NAME') ?: 'MerchHub'); ?> is a modern online merch store bringing you premium clothing, accessories, and collectibles from brands you love. We focus on quality, speed, and a smooth shopping experience.</p>
          <a href="about.php" class="btn">read more</a>
       </div>
 
@@ -116,7 +116,7 @@ if(isset($_POST['add_to_cart'])){
 
    <div class="content">
       <h3>have any questions?</h3>
-      <p>Thank you for visiting us. We want to ensure that your experience with our book is as enjoyable and seamless as possible. If you have any questions or concerns, please take a moment to review the following frequently asked questions. If your question isn't covered, feel free to reach out to our dedicated support team at mahbub@gmail.com or through our contact form.</p>
+      <p>Thanks for visiting. If you have questions about sizing, shipping, or orders, reach our support team anytime via the contact form.</p>
       <a href="contact.php" class="white-btn">contact us</a>
    </div>
 

@@ -41,16 +41,14 @@ if(!isset($user_id)){
    <div class="flex">
 
       <div class="image">
-         <img src="images/about-img.jpg" alt="">
+         <img src="image/about-img-new.webp" alt="">
       </div>
 
       <div class="content">
-         <h3>why choose us?</h3>
-         <p>At  বইমেলা, we pride ourselves on curating a diverse and extensive collection of books. Whether you're into classic literature, contemporary fiction, or niche genres, we have something for every reader.
- We believe in building a strong reading community. 
-
-         <p>Choose বইমেলা for a personalized, diverse, and engaging book-buying experience. Thank you for being a part of our reading community</p>
-</p>
+    <h3>why choose us?</h3>
+    <p>At <?php echo isset($STORE_NAME) ? $STORE_NAME : (getenv('STORE_NAME') ?: 'MerchHub'); ?>, we curate a diverse lineup of quality merch: apparel, accessories, collectibles, and limited drops. Whether you're into minimalist streetwear or bold fandom pieces, there's something for every style.</p>
+    <p>We believe in building a vibrant community of creators and fans. We focus on premium materials, ethical sourcing, and fast fulfillment.</p>
+    <p>Choose <?php echo isset($STORE_NAME) ? $STORE_NAME : (getenv('STORE_NAME') ?: 'MerchHub'); ?> for a personalized, high-quality merch experience. Thanks for being part of the journey!</p>
          <a href="contact.php" class="btn">contact us</a>
       </div>
 
@@ -60,163 +58,163 @@ if(!isset($user_id)){
 
 <section class="reviews">
 
-   <h1 class="title">client's reviews</h1>
+   <h1 class="title">customer reviews</h1>
 
    <div class="box-container">
 
       <div class="box">
-         <img src="image/pic-1.png" alt=" pic is loading">
-         <p>বইমেলায় ঘুরতে গিয়েই হারিয়ে যেতে ইচ্ছা করে! এত লালিত্যময় প্রচ্ছদ, গন্ধে মাতোয়ারা কাগজ আর অগণিত গল্পের সমুদ্রে ভাসতে থাকতে ইচ্ছা করে। ঠিক একটা বইয়ের স্বপ্নলোক</p>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-         </div>
-         <h3>Tanvir Islam Robin</h3>
+         <img src="image/brands/customer-1.jpeg" alt="customer avatar">
+         <p>Quality exceeded expectations. Fabric feels premium and packaging was neat. Will order again.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>Arjun Mehta</h3>
       </div>
 
-      <div class="box">
-      <img src="image/pic-2.png" alt=" pic is loading">
+   <div class="box">
+   <img src="image/brands/customer-2.jpeg" alt="customer avatar">
       
-         <p>বইমেলার মত অনলাইন দোকান হতে  বই কেনার মত  মজার আর আনন্দদায়ক কী হতে পারে? চাইলেই যেকোনো বই, হাতের কাছেই, মিনিটেই! <br> চমৎকার!</p>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-         </div>
-         <h3>Tanif Mia</h3>
+         <p>Checkout was fast and my hoodie arrived earlier than estimated. Fit was perfect.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>Rohan Iyer</h3>
       </div>
 
       <div class="box">
-         <img src="image/pic-3.png" alt="">
-         <p>কোন বইটি কিনবো বুঝতে পারছেন না   ? বইমেলার সুন্দর সুন্দর রিভিউ  আর  চমৎকার রেকমেন্ডেশনগুলো  তো লাইফসেভার  ! সঠিক বইটা খুঁজে পেতে দারুণ সাহায্য করে।<br></p>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-         </div>
-         <h3>Azrul Amalin</h3>
+         <img src="image/brands/customer-3.webp" alt="customer avatar">
+         <p>Love the curation. Easy to discover new limited drops without scrolling forever.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>Aisha Kapoor</h3>
       </div>
 
       <div class="box">
-         <img src="image/pic-4.png" alt="">
-         <p>অফার আর ডিসকাউন্টের ঝড় লাগে বইমেলায়! পছন্দের বইগুলো সস্তায় কিনতে পেরে মজা ডবল হয়ে যায়।বইমেলা শুধু বইয়ের দোকান না, এ এক আড্ডাস্থল বইপ্রেমীদের জন্য। সবকিছুই এক জায়গায়! লাভই লাভ</p>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-         </div>
-         <h3>Salauddin Ahmen</h3>
+         <img src="image/brands/customer-4.jpeg" alt="customer avatar">
+         <p>Seasonal discounts helped me grab two tees for the price of one. Great value.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>Priya Nair</h3>
       </div>
 
       <div class="box">
-         <img src="image/pic-5.png" alt="">
-         <p>বইমেলায় বই কেনা শুধু কেনাকাটা না, একটা অন্বেষণ! নতুন লেখক, অচেনা গল্প, লুকোনো জEMS খুঁজে পেতে এমন জায়গা আর কোথায়? বইয়ের পৃথিবীতে এক সফরের মতো</p>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-         </div>
-         <h3>Maksudor Rahman Roman</h3>
+         <img src="image/brands/customer-5.jpeg" alt="customer avatar">
+         <p>The collectible pin set was nicely detailed. Packaging kept everything protected.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>Sneha Patel</h3>
       </div>
 
       <div class="box">
-         <img src="image/pic-6.png" alt="">
-         <p>অনলাইন শপিংয়ের ঝামেলা ভুলে গেছি বইমেলায়! সহজ অর্ডারিং, দ্রুত ডেলিভারি আর নিখুঁত প্যাকেজিং - সবকিছুই এত মসৃণ যে বারবার ফিরে আসতে হয়।</p>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-         </div>
-         <h3>Rana Matria</h3>
+         <img src="image/brands/customer-6.jpeg" alt="customer avatar">
+         <p>Ordering process was smooth and tracking updates were accurate. Will recommend.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>Vikram Singh</h3>
       </div>
 
    </div>
 
 </section>
 
-<section class="authors">
+<section class="brands">
 
-   <h1 class="title">greate authors</h1>
+   <h1 class="title">featured brands</h1>
 
    <div class="box-container">
 
       <div class="box">
-         <img src="image/author-1.jpg" alt="">
+         <img src="image/brands/delhi-street-co.png" alt="Delhi Street Co. brand image">
          <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
             <a href="#" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-linkedin"></a>
          </div>
-         <h3>তৌকির আহমেদ</h3>
+         <h3>Delhi Street Co.</h3>
       </div>
 
       <div class="box">
-         <img src="image/author-2.jpg" alt="">
+         <img src="image/brands/bengal-looms.jpeg" alt="Bengal Looms brand image">
          <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
             <a href="#" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-linkedin"></a>
          </div>
-         <h3>নিশান রায়</h3>
+         <h3>Bengal Looms</h3>
       </div>
 
       <div class="box">
-         <img src="image/author-3.jpg" alt="">
+         <img src="image/brands/mumbai-minimal.webp" alt="Mumbai Minimal brand image">
          <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
             <a href="#" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-linkedin"></a>
          </div>
-         <h3>মিহির কান্তি রায়</h3>
+         <h3>Mumbai Minimal</h3>
       </div>
 
       <div class="box">
-         <img src="image/author-4.jpg" alt="">
+         <img src="image/brands/goa-collective.jpeg" alt="Goa Collective brand image">
          <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
             <a href="#" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-linkedin"></a>
          </div>
-         <h3>তানভীর আহমেদ</h3>
+         <h3>Goa Collective</h3>
       </div>
 
       <div class="box">
-         <img src="image/author-5.jpg" alt="">
+         <img src="image/brands/himalaya-gear.png" alt="Himalaya Gear brand image">
          <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
             <a href="#" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-linkedin"></a>
          </div>
-         <h3>সাকিব আল হাসান</h3>
+         <h3>Himalaya Gear</h3>
       </div>
 
       <div class="box">
-         <img src="image/author-6.jpg" alt="">
+         <img src="image/brands/hyderabad-crafts.jpeg" alt="Hyderabad Crafts brand image">
          <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
             <a href="#" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-linkedin"></a>
          </div>
-         <h3>সুস্মিতো রানা মৈত্র </h3>
+         <h3>Hyderabad Crafts</h3>
       </div>
 
    </div>

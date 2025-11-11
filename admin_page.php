@@ -50,7 +50,7 @@ if(!isset($admin_id)){
                };
             };
          ?>
-         <h3>$<?php echo $total_pendings; ?>/-</h3>
+         <h3><?php echo (isset($CURRENCY_PREFIX)?$CURRENCY_PREFIX:(getenv('CURRENCY_PREFIX')?:'Rs')); ?> <?php echo $total_pendings; ?>/-</h3>
          <p>total pendings</p>
       </div>
 
@@ -65,7 +65,7 @@ if(!isset($admin_id)){
                };
             };
          ?>
-         <h3>$<?php echo $total_completed; ?>/-</h3>
+         <h3><?php echo (isset($CURRENCY_PREFIX)?$CURRENCY_PREFIX:(getenv('CURRENCY_PREFIX')?:'Rs')); ?> <?php echo $total_completed; ?>/-</h3>
          <p>completed payments</p>
       </div>
 

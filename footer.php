@@ -19,11 +19,9 @@
       </div>
 
       <div class="box">
-         <h3>contact info</h3>
-         <p> <i class="fas fa-phone"></i> 01736299581</p>
-         <p> <i class="fas fa-phone"></i> 01897708391 </p>
-         <p> <i class="fas fa-envelope"></i> mahbubhasanabid@gmail.com </p>
-         <p> <i class="fas fa-map-marker-alt"></i> Patuakhali,Barisal,Bangladesh </p>
+         <h3>support</h3>
+         <p> <i class="fas fa-envelope"></i> support@merchhub.local </p>
+         <p> <i class="fas fa-map-marker-alt"></i> Remote / Global </p>
       </div>
 
       <div class="box">

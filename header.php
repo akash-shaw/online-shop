@@ -27,7 +27,7 @@ if(isset($message)){
 
    <div class="header-2">
       <div class="flex">
-         <a href="home.php" class="logo">বইমেলা</a>
+         <a href="home.php" class="logo"><?php echo isset($STORE_NAME) ? $STORE_NAME : (getenv('STORE_NAME') ?: 'MerchHub'); ?></a>
 
          <nav class="navbar">
             <a href="home.php">home</a>

@@ -53,7 +53,7 @@ if(!isset($user_id)){
                               <input type="hidden" name="item_name" value="<?php echo $fetch_orders['placed_on']; ?>">
                               <input type="hidden" name="item_number" value="<?php echo $fetch_orders['number']; ?>">
                               <input type="hidden" name="amount" value="<?php echo $fetch_orders['total_price']; ?>">
-                              <input type="hidden" name="currency_code" value="USD">
+                              <input type="hidden" name="currency_code" value="INR">
                               <input type="hidden" name="no_shipping" value="1">
                               <input type="hidden" name="cmd" value="_xclick">
                               <input type="hidden" name="return"            value="https://mahbubhasanabid.study/orders.php">
@@ -66,7 +66,7 @@ if(!isset($user_id)){
          <p> address : <span><?php echo $fetch_orders['address']; ?></span> </p>
          <p> payment method : <span><?php echo $fetch_orders['method']; ?></span> </p>
          <p> your orders : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
-         <p> total price : <span>$<?php echo $fetch_orders['total_price']; ?>/-</span> </p>
+         <p> total price : <span><?php echo (isset($CURRENCY_PREFIX)?$CURRENCY_PREFIX:(getenv('CURRENCY_PREFIX')?:'Rs')); ?> <?php echo $fetch_orders['total_price']; ?>/-</span> </p>
          <p> payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
 
          <form name="pdf_gen" action="print.php" method="post">
