@@ -652,6 +652,7 @@ section{
    box-shadow: var(--box-shadow);
    position: relative;
    border:var(--border);
+   overflow: hidden; /* prevent image overflow */
 }
 
 .shopping-cart .box-container .box .fa-times{
@@ -671,7 +672,10 @@ section{
 }
 
 .shopping-cart .box-container .box img{
-   height: 30rem;
+   width: 100%;
+   aspect-ratio: 1 / 1; /* fixed square aspect ratio */
+   object-fit: cover; /* crop to fill without distortion */
+   display: block;
 }
 
 .shopping-cart .box-container .box .name{
