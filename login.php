@@ -1,7 +1,7 @@
 <?php
 
 include 'config.php';
-session_start();
+// session already started and autologin attempted in config.php
 
 if(isset($_POST['submit'])){
 
@@ -14,18 +14,31 @@ if(isset($_POST['submit'])){
 
       $row = mysqli_fetch_assoc($select_users);
 
-      if($row['user_type'] == 'admin'){
+   // Establish session & optional remember-me
+   $remember_requested = isset($_POST['remember']);
+
+   if($row['user_type'] == 'admin'){
 
          $_SESSION['admin_name'] = $row['name'];
          $_SESSION['admin_email'] = $row['email'];
          $_SESSION['admin_id'] = $row['id'];
+         if($remember_requested){
+            set_remember_me($conn, $row['id']);
+         } else {
+            clear_remember_me($conn);
+         }
          header('location:admin_page.php');
 
-      }elseif($row['user_type'] == 'user'){
+   }elseif($row['user_type'] == 'user'){
 
          $_SESSION['user_name'] = $row['name'];
          $_SESSION['user_email'] = $row['email'];
          $_SESSION['user_id'] = $row['id'];
+         if($remember_requested){
+            set_remember_me($conn, $row['id']);
+         } else {
+            clear_remember_me($conn);
+         }
          header('location:home.php');
 
       }
@@ -74,6 +87,10 @@ if(isset($message)){
       <h3>login  now</h3>
       <input type="email" name="email" placeholder="enter your email" required class="box">
       <input type="password" name="password" placeholder="enter your password" required class="box">
+      <div style="display:flex;align-items:center;gap:.7rem;justify-content:center;margin-top:.5rem;">
+         <input type="checkbox" name="remember" id="remember" style="width:auto;">
+         <label for="remember" style="font-size:1.4rem;color:#333;cursor:pointer;">Remember me</label>
+      </div>
       <input type="submit" name="submit" value="login now" class="btn">
       <p>don't have an account? <a href="register.php">register now</a></p>
    </form>

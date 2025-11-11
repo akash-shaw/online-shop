@@ -2,7 +2,7 @@
 
 include 'config.php';
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 $admin_id = $_SESSION['admin_id'];
 

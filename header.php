@@ -21,7 +21,13 @@ if(isset($message)){
             <a href="#" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-linkedin"></a>
          </div>
-         <p> new <a href="login.php">login</a> | <a href="register.php">register</a> </p>
+         <p>
+            <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id']){ ?>
+               <span style="font-size:1.6rem;color:#333;">Welcome, <?php echo htmlspecialchars($_SESSION['user_name'], ENT_QUOTES, 'UTF-8'); ?> | <a href="logout.php">logout</a></span>
+            <?php } else { ?>
+               new <a href="login.php">login</a> | <a href="register.php">register</a>
+            <?php } ?>
+         </p>
       </div>
    </div>
 

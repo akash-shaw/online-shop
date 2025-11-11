@@ -56,12 +56,3 @@ CREATE TABLE `message` (
 -- Create an admin user (password: admin)
 INSERT INTO `users` (`name`, `email`, `password`, `user_type`) VALUES
 ('Admin User', 'admin@example.com', MD5('admin'), 'admin');
-
--- Demo merch products (images will be placed in uploaded_img/)
-INSERT INTO `products` (`name`, `price`, `image`) VALUES
-('Graphic Tee - Neon Pulse', 25, 'tee.jpg'),
-('Hoodie - Midnight Core', 55, 'hoodie.jpg'),
-('Cap - Minimal Logo', 18, 'cap.jpg'),
-('Sticker Pack - Retro Wave', 8, 'stickers.jpg'),
-('Collectible Pin - Pixel Bot', 12, 'pin.jpg'),
-('Tote Bag - Eco Print', 22, 'tote.jpg');

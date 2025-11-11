@@ -4,7 +4,7 @@ include_once('TCPDF/tcpdf.php');
 
 session_start();
 
-$user_id = $_SESSION['user_id'];
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 //$email=$_SESSION['user_email'];
 //echo $email;
