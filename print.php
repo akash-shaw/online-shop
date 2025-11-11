@@ -2,16 +2,28 @@
 require 'config.php'; 
 include_once('TCPDF/tcpdf.php');
 
-session_start();
-
+// Session is started in config.php; guard in case of older includes
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
-//$email=$_SESSION['user_email'];
-//echo $email;
-// $user = $_POST["user_id"];
+// Require logged-in user
+$user_id = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : 0;
+if ($user_id <= 0) {
+	header('Location: login.php');
+	exit;
+}
 
- //echo $user_id ;
-$order_query = mysqli_query($conn, "SELECT * FROM orders WHERE user_id =$user_id  ");// or die('query failed');
+// Determine which order to print: prefer explicit id, else latest order for user
+$order_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+if ($order_id > 0) {
+	$order_query = mysqli_query($conn, "SELECT * FROM `orders` WHERE id = $order_id AND user_id = $user_id LIMIT 1");
+} else {
+	$order_query = mysqli_query($conn, "SELECT * FROM `orders` WHERE user_id = $user_id ORDER BY id DESC LIMIT 1");
+}
+
+if (!$order_query || mysqli_num_rows($order_query) === 0) {
+	echo 'Record not found for PDF.';
+	exit;
+}
 
 $fetch_orders = mysqli_fetch_assoc($order_query);
 
@@ -25,7 +37,7 @@ $fetch_orders = mysqli_fetch_assoc($order_query);
 // $sql3 = mysqli_query($con, "SELECT * FROM history  WHERE  eid='$eid' ");
 // $history = mysqli_fetch_assoc($sql3);
 
-$count = mysqli_num_rows($order_query);
+$count = 1; // we ensured one row above
 
 if($count>0) 
 {
@@ -112,10 +124,6 @@ $pdf->Output('invoice.pdf', 'D');
 // }
 
 //----- End Code for generate pdf
-}
-else
-{
-	echo 'Record not found for PDF.';
 }
 	
 
