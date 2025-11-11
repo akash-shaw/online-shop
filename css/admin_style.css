@@ -326,10 +326,14 @@ section{
    border:var(--border);
    box-shadow: var(--box-shadow);
    background-color: var(--white);
+   overflow: hidden; /* prevent image overflow */
 }
 
 .show-products .box-container .box img{
-   height: 30rem;
+   width: 100%;
+   aspect-ratio: 1 / 1; /* fixed square aspect ratio */
+   object-fit: cover; /* crop to fill without distortion */
+   display: block;
 }
 
 .show-products .box-container .box .name{

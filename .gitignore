@@ -1,0 +1,62 @@
+# Environment & secrets
+.env
+*.env
+
+# Logs
+error_log
+*.log
+logs/
+
+# Runtime uploads (user-generated). Keep directory; track placeholder.
+uploaded_img/*
+!uploaded_img/.gitkeep
+
+# Cache & temp files
+cache/
+tmp/
+temp/
+*.cache
+*.tmp
+
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Node (if ever added for asset build)
+node_modules/
+npm-debug.log*
+pnpm-lock.yaml
+package-lock.json
+
+# Composer / PHP tool artifacts (NOTE: vendor kept since no root composer.json present)
+composer.phar
+composer.lock.old
+
+# Backup / swap / generated
+*.bak
+*.swp
+*.swo
+*.orig
+*.diff
+*.patch
+
+# Generated PDFs / reports
+*.pdf
+
+# Misc
+*.sass-cache
+*.map
+*.coverage
+
+# In case of locally created database dumps (keep curated schema files)
+dump_*.sql
+backup_*.sql
+
+# Ignore anything in error_log directory if expanded later
+error_log/*
